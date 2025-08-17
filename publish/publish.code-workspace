@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Services"
+		},
+		{
+			"path": "../bin"
+		},
+		{
+			"path": "../artifacts"
+		},
+		{
+			"path": "../obj"
+		},
+		{
+			"path": "../Controllers"
+		},
+		{
+			"path": "../ScheduledTasks"
+		},
+		{
+			"path": "../web"
+		},
+		{
+			"path": "../Configuration"
+		}
+	]
+}

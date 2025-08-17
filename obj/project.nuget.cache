@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "8ryRTWh05weONibPTCQ0tvXgSfmm1c9gf/2UaAbV1QfMZPRx+CP7MFtuy56L4GFOgq18kZqUTXDo6ftt7thHOQ==",
+  "success": true,
+  "projectFilePath": "/Users/salmanjaiser/StreamPlugin/StreamingCatalogs.csproj",
+  "expectedPackageFiles": [
+    "/Users/salmanjaiser/.nuget/packages/dapper/2.1.35/dapper.2.1.35.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/microsoft.data.sqlite/7.0.15/microsoft.data.sqlite.7.0.15.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/microsoft.data.sqlite.core/7.0.15/microsoft.data.sqlite.core.7.0.15.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.0/microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/microsoft.extensions.http/6.0.0/microsoft.extensions.http.6.0.0.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/microsoft.extensions.logging/6.0.0/microsoft.extensions.logging.6.0.0.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.4/microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/polly/7.2.3/polly.7.2.3.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.4/sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/sqlitepclraw.core/2.1.4/sqlitepclraw.core.2.1.4.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.4/sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.4/sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/salmanjaiser/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

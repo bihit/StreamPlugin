@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emby.Naming</name>
+    </assembly>
+    <members>
+        <member name="P:Emby.Naming.Audio.MultiPartResult.IsMultiPart">
+            <summary>
+            Gets or sets a value indicating whether this instance is multi part.
+            </summary>
+            <value><c>true</c> if this instance is multi part; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Emby.Naming.Common.MediaFileInfo">
+            <summary>
+            Represents a single video file
+            </summary>
+        </member>
+        <member name="P:Emby.Naming.Common.MediaFileInfo.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>The path.</value>
+        </member>
+        <member name="P:Emby.Naming.Common.MediaFileInfo.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Emby.Naming.Common.MediaFileInfo.Year">
+            <summary>
+            Gets or sets the year.
+            </summary>
+            <value>The year.</value>
+        </member>
+        <member name="P:Emby.Naming.Common.MediaFileInfo.ExtraType">
+            <summary>
+            Gets or sets the type of the extra, e.g. trailer, theme song, behing the scenes, etc.
+            </summary>
+            <value>The type of the extra.</value>
+        </member>
+        <member name="P:Emby.Naming.Common.MediaFileInfo.ExtraRule">
+            <summary>
+            Gets or sets the extra rule.
+            </summary>
+            <value>The extra rule.</value>
+        </member>
+        <member name="P:Emby.Naming.Common.MediaFileInfo.Format3D">
+            <summary>
+            Gets or sets the format3 d.
+            </summary>
+            <value>The format3 d.</value>
+        </member>
+        <member name="P:Emby.Naming.Common.MediaFileInfo.Is3D">
+            <summary>
+            Gets or sets a value indicating whether [is3 d].
+            </summary>
+            <value><c>true</c> if [is3 d]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Emby.Naming.Common.MediaFileInfo.IsStub">
+            <summary>
+            Gets a value indicating whether this instance is stub.
+            </summary>
+            <value><c>true</c> if this instance is stub; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Emby.Naming.Common.MediaFileInfo.StubType">
+            <summary>
+            Gets or sets the type of the stub.
+            </summary>
+            <value>The type of the stub.</value>
+        </member>
+        <member name="P:Emby.Naming.Common.MediaFileInfo.IsDirectory">
+            <summary>
+            Gets or sets the type.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Emby.Naming.Common.MediaFileInfo.FileNameWithoutExtension">
+            <summary>
+            Gets the file name without extension.
+            </summary>
+            <value>The file name without extension.</value>
+        </member>
+        <member name="F:Emby.Naming.Common.MediaType.Audio">
+            <summary>
+            The audio
+            </summary>
+        </member>
+        <member name="F:Emby.Naming.Common.MediaType.Photo">
+            <summary>
+            The photo
+            </summary>
+        </member>
+        <member name="F:Emby.Naming.Common.MediaType.Video">
+            <summary>
+            The video
+            </summary>
+        </member>
+        <member name="P:Emby.Naming.Subtitles.SubtitleInfo.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>The path.</value>
+        </member>
+        <member name="P:Emby.Naming.Subtitles.SubtitleInfo.Language">
+            <summary>
+            Gets or sets the language.
+            </summary>
+            <value>The language.</value>
+        </member>
+        <member name="P:Emby.Naming.Subtitles.SubtitleInfo.IsDefault">
+            <summary>
+            Gets or sets a value indicating whether this instance is default.
+            </summary>
+            <value><c>true</c> if this instance is default; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Emby.Naming.Subtitles.SubtitleInfo.IsForced">
+            <summary>
+            Gets or sets a value indicating whether this instance is forced.
+            </summary>
+            <value><c>true</c> if this instance is forced; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Emby.Naming.TV.EpisodeInfo.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>The path.</value>
+        </member>
+        <member name="P:Emby.Naming.TV.EpisodeInfo.SeriesName">
+            <summary>
+            Gets or sets the name of the series.
+            </summary>
+            <value>The name of the series.</value>
+        </member>
+        <member name="M:Emby.Naming.TV.EpisodeResolver.#ctor(Emby.Naming.Common.NamingOptions)">
+            <summary>
+            for auto-organize
+            </summary>
+        </member>
+        <member name="M:Emby.Naming.TV.SeasonPathParser.GetSeasonNumberFromPath(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Gets the season number from path.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="supportSpecialAliases">if set to <c>true</c> [support special aliases].</param>
+            <param name="supportNumericSeasonFolders">if set to <c>true</c> [support numeric season folders].</param>
+            <returns>System.Nullable{System.Int32}.</returns>
+        </member>
+        <member name="P:Emby.Naming.TV.SeasonPathParserResult.SeasonNumber">
+            <summary>
+            Gets or sets the season number.
+            </summary>
+            <value>The season number.</value>
+        </member>
+        <member name="P:Emby.Naming.TV.SeasonPathParserResult.Success">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Emby.Naming.TV.SeasonPathParserResult"/> is success.
+            </summary>
+            <value><c>true</c> if success; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Emby.Naming.Video.CleanDateTimeParser">
+            <summary>
+            http://kodi.wiki/view/Advancedsettings.xml#video
+            </summary>
+        </member>
+        <member name="P:Emby.Naming.Video.CleanDateTimeResult.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.CleanDateTimeResult.Year">
+            <summary>
+            Gets or sets the year.
+            </summary>
+            <value>The year.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.CleanDateTimeResult.HasChanged">
+            <summary>
+            Gets or sets a value indicating whether this instance has changed.
+            </summary>
+            <value><c>true</c> if this instance has changed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Emby.Naming.Video.CleanStringParser">
+            <summary>
+            http://kodi.wiki/view/Advancedsettings.xml#video
+            </summary>
+        </member>
+        <member name="P:Emby.Naming.Video.ExtraResult.ExtraType">
+            <summary>
+            Gets or sets the type of the extra.
+            </summary>
+            <value>The type of the extra.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.ExtraResult.Rule">
+            <summary>
+            Gets or sets the rule.
+            </summary>
+            <value>The rule.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.ExtraRule.Token">
+            <summary>
+            Gets or sets the token.
+            </summary>
+            <value>The token.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.ExtraRule.ExtraType">
+            <summary>
+            Gets or sets the type of the extra.
+            </summary>
+            <value>The type of the extra.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.ExtraRule.RuleType">
+            <summary>
+            Gets or sets the type of the rule.
+            </summary>
+            <value>The type of the rule.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.ExtraRule.MediaTypes">
+            <summary>
+            Gets or sets the type of the media.
+            </summary>
+            <value>The type of the media.</value>
+        </member>
+        <member name="F:Emby.Naming.Video.ExtraRuleType.Suffix">
+            <summary>
+            The suffix
+            </summary>
+        </member>
+        <member name="F:Emby.Naming.Video.ExtraRuleType.Filename">
+            <summary>
+            The filename
+            </summary>
+        </member>
+        <member name="P:Emby.Naming.Video.Format3DResult.Is3D">
+            <summary>
+            Gets or sets a value indicating whether [is3 d].
+            </summary>
+            <value><c>true</c> if [is3 d]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.Format3DResult.Format3D">
+            <summary>
+            Gets or sets the format3 d.
+            </summary>
+            <value>The format3 d.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.Format3DRule.Token">
+            <summary>
+            Gets or sets the token.
+            </summary>
+            <value>The token.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.Format3DRule.PreceedingToken">
+            <summary>
+            Gets or sets the preceeding token.
+            </summary>
+            <value>The preceeding token.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.StubTypeRule.Token">
+            <summary>
+            Gets or sets the token.
+            </summary>
+            <value>The token.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.StubTypeRule.StubType">
+            <summary>
+            Gets or sets the type of the stub.
+            </summary>
+            <value>The type of the stub.</value>
+        </member>
+        <member name="T:Emby.Naming.Video.VideoInfo">
+            <summary>
+            Represents a complete video, including all parts and subtitles
+            </summary>
+        </member>
+        <member name="P:Emby.Naming.Video.VideoInfo.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.VideoInfo.Year">
+            <summary>
+            Gets or sets the year.
+            </summary>
+            <value>The year.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.VideoInfo.Files">
+            <summary>
+            Gets or sets the files.
+            </summary>
+            <value>The files.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.VideoInfo.Extras">
+            <summary>
+            Gets or sets the extras.
+            </summary>
+            <value>The extras.</value>
+        </member>
+        <member name="P:Emby.Naming.Video.VideoInfo.AlternateVersions">
+            <summary>
+            Gets or sets the alternate versions.
+            </summary>
+            <value>The alternate versions.</value>
+        </member>
+        <member name="M:Emby.Naming.Video.VideoResolver.ResolveDirectory(System.ReadOnlySpan{System.Char},System.Boolean)">
+            <summary>
+            Resolves the directory.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Emby.Naming.Video.VideoResolver.ResolveFile(System.ReadOnlySpan{System.Char})">
+            <summary>
+            Resolves the file.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Emby.Naming.Video.VideoResolver.Resolve(MediaBrowser.Model.IO.FileSystemMetadata,System.Boolean)">
+            <summary>
+            Resolves the specified path.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="IsDirectory">if set to <c>true</c> [is folder].</param>
+        </member>
+    </members>
+</doc>

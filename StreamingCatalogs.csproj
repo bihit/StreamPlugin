@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>StreamingCatalogs</AssemblyName>
+    <RootNamespace>StreamingCatalogs</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.15" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+    <PackageReference Include="Polly" Version="7.2.3" />
+  </ItemGroup>
+
+  <!-- Emby-Server-Assemblies direkt referenzieren -->
+  <ItemGroup>
+    <Reference Include="MediaBrowser.Common">
+      <HintPath>/Applications/EmbyServer.app/Contents/MacOS/MediaBrowser.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="MediaBrowser.Controller">
+      <HintPath>/Applications/EmbyServer.app/Contents/MacOS/MediaBrowser.Controller.dll</HintPath>
+    </Reference>
+    <Reference Include="MediaBrowser.Model">
+      <HintPath>/Applications/EmbyServer.app/Contents/MacOS/MediaBrowser.Model.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Eingebettete HTML-Seite für die Konfig -->
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\ui.html">
+      <LogicalName>StreamingCatalogs.Configuration.ui.html</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration\catalog.html">
+      <LogicalName>StreamingCatalogs.Configuration.catalog.html</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="Build">
+    <PropertyGroup>
+      <!-- Emby-Plugin-Ordner je OS -->
+      <EmbyPluginDir Condition="'$(OS)' == 'Windows_NT'">$(APPDATA)\Emby-Server\plugins</EmbyPluginDir>
+      <EmbyPluginDir Condition="'$(OS)' != 'Windows_NT'">$(HOME)/.config/emby-server/plugins</EmbyPluginDir>
+    </PropertyGroup>
+
+    <MakeDir Directories="$(EmbyPluginDir)" />
+    <!-- Kopiert die gerade gebaute DLL (voller Pfad) -->
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(EmbyPluginDir)" SkipUnchangedFiles="true" />
+    <!-- Kopiert alle Abhängigkeiten (z.B. Polly.dll) in das Plugin-Verzeichnis -->
+    <Copy SourceFiles="@(ReferenceCopyLocalPaths)" DestinationFolder="$(EmbyPluginDir)" SkipUnchangedFiles="true" />
+  </Target>
+
+</Project>

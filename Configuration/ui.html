@@ -1,0 +1,151 @@
+<div id="StreamingCatalogsConfigPage"
+     data-role="page"
+     class="type-interior pluginConfigurationPage"
+     data-require="emby-button,emby-checkbox">
+  <div data-role="content">
+    <div class="content-primary">
+      <h2>Streaming-Kataloge Konfiguration</h2>
+
+      <div class="inputContainer">
+        <input is="emby-input" type="text" id="txtTmdbApiKey" label="TMDB API Key:">
+        <div class="fieldDescription">
+          API-Schlüssel von The Movie Database (erforderlich für die Datenabfrage).
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2em;">Manuelle Konfiguration</h3>
+      <div class="fieldDescription">
+          Diese Werte werden verwendet, wenn die automatische Erkennung deaktiviert ist oder keine Anbieter findet.
+      </div>
+
+      <div class="inputContainer">
+        <input is="emby-input" type="text" id="txtProviderIds" label="TMDB Provider IDs (pipe-getrennt):" pattern="[0-9]+(?:\|[0-9]+)*" required>
+        <div class="fieldDescription">
+          Beispiel: 8|9|337 für Netflix, Amazon Prime Video, Disney+.
+        </div>
+      </div>
+
+      <div class="inputContainer">
+        <input is="emby-input" type="text" id="txtRegion" label="Standard-Region:" required>
+        <div class="fieldDescription">
+          Zwei-Buchstaben-Ländercode (z.B. CH, DE, US).
+        </div>
+      </div>
+
+      <div class="inputContainer">
+        <input is="emby-input" type="text" id="txtSortBy" label="Sortierung:">
+        <div class="fieldDescription">
+          Standard-Sortierung für Kataloge (z.B. trending, popular, new).
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2em;">Automatische Erkennung</h3>
+      <label class="emby-checkbox-label">
+          <input id="chkAutoDetect" type="checkbox" is="emby-checkbox">
+          <span>Anbieter aus der Bibliothek automatisch erkennen</span>
+      </label>
+      <div class="fieldDescription">
+          Ermittelt die Top-Streaming-Anbieter basierend auf deinen vorhandenen Filmen und Serien.
+      </div>
+
+      <div class="inputContainer">
+          <input is="emby-input" type="number" id="numSampleSize" label="Stichprobengrösse für Auto-Erkennung:">
+          <div class="fieldDescription">
+              Anzahl der Medieneinträge, die für die Erkennung analysiert werden. Reduzieren bei Performance-Problemen.
+          </div>
+      </div>
+
+      <div class="inputContainer">
+          <input is="emby-input" type="number" id="numTopN" label="Anzahl Top-Anbieter:">
+          <div class="fieldDescription">
+              Wie viele der am häufigsten vorkommenden Anbieter sollen verwendet werden.
+          </div>
+      </div>
+
+      <button id="btnSave" is="emby-button" class="raised button-submit block">
+        <span>Speichern</span>
+      </button>
+    </div>
+
+    <div id="msg" style="margin-top:8px;"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  define([], function () {
+    'use strict';
+    const pluginName = 'StreamingCatalogs';
+
+  async function getPluginId() {
+    const data = await ApiClient.getJSON(ApiClient.getUrl('Plugins'));
+    const items = (data && (data.Items || data)) || [];
+    const p = items.find(x => x && x.Name === pluginName);
+    if (!p || !p.Id) throw new Error('PluginId nicht gefunden');
+    return p.Id;
+  }
+
+  return function (view) {
+    let pluginId = null;
+    const $ = (selector) => view.querySelector(selector);
+
+    function showSaveMessage() {
+        const msg = $('#msg');
+        if (msg) {
+            msg.textContent = 'Gespeichert ✓';
+            setTimeout(() => { msg.textContent = ''; }, 2000);
+        }
+    }
+
+    async function load() {
+      const config = await ApiClient.getPluginConfiguration(pluginId);
+      $('#txtTmdbApiKey').value = config.ApiKey || '';
+      $('#txtProviderIds').value = config.DefaultProviderIds || '8|9|337';
+      $('#txtRegion').value = config.DefaultWatchRegion || 'CH';
+      $('#txtSortBy').value = config.DefaultSortBy || 'trending';
+      $('#chkAutoDetect').checked = config.AutoDetectProvidersFromLibrary;
+      $('#numSampleSize').value = config.AutoDetectSampleSize || 500;
+      $('#numTopN').value = config.AutoDetectTopN || 6;
+    }
+
+    async function save() {
+      try {
+        const config = await ApiClient.getPluginConfiguration(pluginId);
+        config.ApiKey = $('#txtTmdbApiKey').value;
+        config.DefaultProviderIds = $('#txtProviderIds').value;
+        config.DefaultWatchRegion = $('#txtRegion').value;
+        config.DefaultSortBy = $('#txtSortBy').value;
+        config.AutoDetectProvidersFromLibrary = $('#chkAutoDetect').checked;
+        config.AutoDetectSampleSize = parseInt($('#numSampleSize').value, 10) || 500;
+        config.AutoDetectTopN = parseInt($('#numTopN').value, 10) || 6;
+        
+        // This is always true with the new logic
+        config.AlwaysEnableDefaultProviders = true;
+
+        const result = await ApiClient.updatePluginConfiguration(pluginId, config);
+        Dashboard.processPluginConfigurationUpdateResult(result);
+        showSaveMessage();
+      } catch (e) {
+        console.error('Error saving config', e);
+        Dashboard.alert({ message: 'Fehler beim Speichern der Konfiguration.' });
+      }
+    }
+
+    const onShow = async () => {
+      try {
+        pluginId = pluginId || await getPluginId();
+        await load();
+        
+        const saveButton = $('#btnSave');
+        if (saveButton) { saveButton.addEventListener('click', () => save()); }
+      } catch (e) {
+        console.error('Init failed', e);
+        Dashboard.alert({ message: 'PluginId/Config konnte nicht geladen werden.' });
+      }
+    };
+
+    // robust: auf beiden Events initialisieren
+    view.addEventListener('viewshow', onShow);
+    view.addEventListener('pageshow', onShow);
+  };
+  });
+</script>

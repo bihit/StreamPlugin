@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Streaming Catalogs</title>
+</head>
+<body>
+    <div id="StreamingCatalogsPage" data-role="page" class="type-interior pluginPage">
+
+        <div data-role="content">
+            <div class="content-primary">
+                <div class="catalog-header">
+                    <h1>Streaming Catalogs</h1>
+                    <div id="providerTabs" class="emby-tabs"></div>
+                </div>
+                <div id="catalogItems" class="itemsContainer vertical-wrap">
+                    <!-- Items will be loaded here -->
+                </div>
+                <div id="loading" style="display: none; text-align: center; padding: 2em;">
+                    <p>Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .catalog-header {
+                margin-bottom: 2em;
+            }
+            .provider-tab {
+                margin-right: 1em;
+            }
+            .card.catalog-card {
+                width: 12.5em; /* Adjust width as needed */
+            }
+        </style>
+
+        <script type="text/javascript">
+            define(['loading'], function (loading) {
+                'use strict';
+
+                const pluginId = "6209a112-8c4a-4977-bb1b-75d649f9e256"; // Plugin GUID
+
+                async function loadItems(providerId, mediaType) {
+                    loading.show();
+                    const itemsContainer = document.querySelector('#catalogItems');
+                    itemsContainer.innerHTML = '';
+
+                    try {
+                        const url = ApiClient.getUrl(`/StreamingCatalogs/Items?ProviderId=${providerId}&MediaType=${mediaType}`);
+                        const items = await ApiClient.getJSON(url);
+
+                        if (items && items.length > 0) {
+                            const cardBuilder = new CardBuilder({
+                                items: items,
+                                shape: 'portrait',
+                                showTitle: true,
+                                centerText: true,
+                                cardLayout: true
+                            });
+                            itemsContainer.innerHTML = cardBuilder.build();
+                        } else {
+                            itemsContainer.innerHTML = '<p>No items found for this provider.</p>';
+                        }
+                    } catch (e) {
+                        console.error('Error loading catalog items', e);
+                        itemsContainer.innerHTML = '<p>Error loading items. Please check the server logs.</p>';
+                    } finally {
+                        loading.hide();
+                    }
+                }
+
+                async function setupTabs(config) {
+                    const providerTabs = document.querySelector('#providerTabs');
+                    providerTabs.innerHTML = ''; // Clear existing tabs
+
+                    const providerMap = {
+                        '8': 'Netflix',
+                        '9': 'Prime Video',
+                        '337': 'Disney+',
+                        '2': 'Apple TV+',
+                        '384': 'HBO Max'
+                        // Add other known providers here
+                    };
+
+                    const providerIds = (config.DefaultProviderIds || '').split('|');
+
+                    providerIds.forEach((id, index) => {
+                        const button = document.createElement('button');
+                        button.is = 'emby-button';
+                        button.classList.add('raised', 'provider-tab');
+                        button.textContent = providerMap[id] || `Provider ${id}`;
+                        button.dataset.providerId = id;
+
+                        button.addEventListener('click', function() {
+                            document.querySelectorAll('.provider-tab').forEach(b => b.classList.remove('button-accent'));
+                            this.classList.add('button-accent');
+                            loadItems(this.dataset.providerId, 'movie'); // Default to movie for now
+                        });
+
+                        providerTabs.appendChild(button);
+
+                        if (index === 0) {
+                            button.click(); // Select the first tab by default
+                        }
+                    });
+                }
+
+                return function (view) {
+                    view.addEventListener('viewshow', async () => {
+                        const config = await ApiClient.getPluginConfiguration(pluginId);
+                        await setupTabs(config);
+                    });
+                };
+            });
+        </script>
+    </div>
+</body>
+</html>

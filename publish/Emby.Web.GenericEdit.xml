@@ -1,0 +1,2061 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emby.Web.GenericEdit</name>
+    </assembly>
+    <members>
+        <member name="M:Emby.Web.GenericEdit.Common.EditorHelpers.GetDescription(System.Enum)">
+            <summary>Gets the content of an enum member's <see cref="T:System.ComponentModel.DescriptionAttribute"/>, or its name in case there is none.</summary>
+            <param name="enumValue">The enum value.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Common.EditorSelectOption.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Conditions.PropertyCondition.ConditionType">
+            <summary>Gets the simple condition.</summary>
+            <value>The simple condition.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Conditions.PropertyCondition.TargetPropertyId">
+            <summary>Gets the target property name or path.</summary>
+            <value>The target property name or path.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Conditions.PropertyCondition.SimpleCondition">
+            <summary>Gets the simple condition.</summary>
+            <value>The simple condition.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Conditions.PropertyCondition.ValueCondition">
+            <summary>Gets the value condition.</summary>
+            <value>The value condition.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Conditions.PropertyCondition.Value">
+            <summary>Gets the value.</summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.EditableObjectBase.EditorTitle">
+            <summary>Gets the editor title.</summary>
+            <value>The editor title.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.EditableObjectBase.EditorDescription">
+            <summary>Gets the editor description.</summary>
+            <value>The editor description.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.EditableObjectBase.TitleButton">
+            <summary>Gets the title button.</summary>
+            <value>The title button.</value>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.EditableObjectCollection.System#Collections#Generic#IEnumerable{MediaBrowser#Model#GenericEdit#IEditableObject}#GetEnumerator">
+            <summary>Returns an enumerator that iterates through the collection.</summary>
+            <returns>An enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.EditableObjectCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Returns an enumerator that iterates through the collection.</summary>
+            <returns>An enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.EditObjectContainer.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.EditObjectContainer.#ctor(System.Object,System.Object,Emby.Web.GenericEdit.Editors.EditorRoot)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.EditObjectContainer"/> class.</summary>
+            <param name="editObject">The edit object.</param>
+            <param name="defaultObject">The default object.</param>
+            <param name="editorRoot">The editor root.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorBase.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorBoolean.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorBoolean.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorBoolean"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Editors.EditorBoolean.AllowEmpty">
+            <summary>Gets or sets a value indicating whether [allow empty].</summary>
+            <value><c>true</c> if [allow empty]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorButtonGroup.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorButtonGroup.#ctor(System.Collections.Generic.IEnumerable{Emby.Web.GenericEdit.Editors.EditorButtonItem},System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorButtonGroup"/> class.</summary>
+            <param name="buttonItems">The button items.</param>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Editors.EditorButtonGroup.EditorItems">
+            <summary>Gets or sets the editor items.</summary>
+            <value>The editor items.</value>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorButtonItem.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorButtonItem.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorButtonItem"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorCaptionItem.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorCaptionItem.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorCaptionItem"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorDateTime.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorDateTime.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorDateTime"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Editors.EditorDateTime.MinValue">
+            <summary>Gets or sets the minimum value.</summary>
+            <value>The minimum value.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Editors.EditorDateTime.MaxValue">
+            <summary>Gets or sets the maximum value.</summary>
+            <value>The maximum value.</value>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorDxGrid.#ctor(System.String,System.String,System.Boolean,System.String,System.String,System.String,System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorDxGrid" /> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+            <param name="doublePaneGrid">if set to <c>true</c> [double pane grid].</param>
+            <param name="dataSourceId">The data source identifier.</param>
+            <param name="dataSource2Id">The data source2 identifier.</param>
+            <param name="selectionSourceId">The selection source identifier.</param>
+            <param name="filterSourceId">The filter source identifier.</param>
+            <param name="datafilterSourceId">The datafilter source identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorDxGrid.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorFilePicker.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorFilePicker.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorFilePicker"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorFolderPicker.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorFolderPicker.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorFolderPicker"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorGroup.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorGroup.#ctor(System.String,Emby.Web.GenericEdit.Editors.EditorBase[],System.String,System.String,Emby.Web.GenericEdit.Editors.EditorButtonItem)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorGroup"/> class.</summary>
+            <param name="title">The title.</param>
+            <param name="editorItems">The editor items.</param>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+            <param name="titleButton">The title button.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorItemList.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorItemList.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorItemList"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorLabelItem.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorLabelItem.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorLabelItem"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorNumeric.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorNumeric.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorNumeric"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorProgressItem.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorProgressItem.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorProgressItem"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorRadioGroup.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorRadioGroup.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorRadioGroup"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorRadioGroup.#ctor(System.Collections.Generic.IList{Emby.Web.GenericEdit.Common.EditorRadioOption},System.String,System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorRadioGroup"/> class.</summary>
+            <param name="radioOptions">The radio options.</param>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+            <param name="itemsSourceId">The items source identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorRoot.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorRoot.#ctor(System.String,Emby.Web.GenericEdit.Editors.EditorBase[],Emby.Web.GenericEdit.Conditions.PropertyCondition[],Emby.Web.GenericEdit.Actions.PostbackAction[],Emby.Web.GenericEdit.Editors.EditorButtonItem)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorRoot" /> class.</summary>
+            <param name="title">The title.</param>
+            <param name="editorItems">The editor items.</param>
+            <param name="propertyConditions">The property conditions.</param>
+            <param name="postbackActions">The postback actions.</param>
+            <param name="titleButton">The title button.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorSelectBase.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorSelectBase.#ctor(System.String,System.String,Emby.Web.GenericEdit.Common.EditorTypes,System.Collections.Generic.IList{Emby.Web.GenericEdit.Common.EditorSelectOption},System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorSelectBase"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+            <param name="elementType">Type of the element.</param>
+            <param name="selectOptions">The select options.</param>
+            <param name="staticItemsSourceId">The static items source identifier.</param>
+            <param name="itemsSourceId">The items source identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorSelectMultiple.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorSelectMultiple.#ctor(System.Collections.Generic.IList{Emby.Web.GenericEdit.Common.EditorSelectOption},System.String,System.String,System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorSelectMultiple"/> class.</summary>
+            <param name="selectOptions">The select options.</param>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+            <param name="staticItemsSourceId">The static items source identifier.</param>
+            <param name="itemsSourceId">The items source identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorSelectSingle.#ctor(System.Collections.Generic.IList{Emby.Web.GenericEdit.Common.EditorSelectOption},System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorSelectSingle"/> class.</summary>
+            <param name="selectOptions">The select options.</param>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+            <param name="staticItemsSourceId">The static items source identifier.</param>
+            <param name="itemsSourceId">The items source identifier.</param>
+            <param name="showAsRadio">if set to <c>true</c> [show as radio].</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorSelectSingle.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorSpacerItem.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorSpacerItem.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorSpacerItem"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorStatusItem.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorStatusItem.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorStatusItem"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorText.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Editors.EditorText.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Editors.EditorText"/> class.</summary>
+            <param name="name">The name.</param>
+            <param name="parentId">The parent identifier.</param>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.ButtonItem.CanShowAsPageButton">
+            <summary>Gets or sets a value indicating whether the button can be moved to a common block of buttons on the page.</summary>
+            <value><c>true</c> if this button can be shown as page button; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.ButtonItem.CanHideInCompactView">
+            <summary>Gets or sets a value indicating whether the button can be hidden in views with limited screen space.</summary>
+            <value><c>true</c> if this button can be hidden; otherwise, <c>false</c>.</value>
+            <remarks>
+                <para>This is intentended for hiding elements in views (like TV mnode), where screen space is limited.</para>
+                <para>Apply this to non-essential elements only as there might be no way to make them visible at the client side.</para>
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.CaptionItem.CanHideInCompactView">
+            <summary>Gets or sets a value indicating whether the caption can be hidden in views with limited screen space.</summary>
+            <value><c>true</c> if this caption can be hidden; otherwise, <c>false</c>.</value>
+            <remarks>
+                <para>This is intentended for hiding elements in views (like TV mnode), where screen space is limited.</para>
+                <para>Apply this to non-essential elements only as there might be no way to make them visible at the client side.</para>
+            </remarks>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Elements.DxDataGrid.#ctor(Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Elements.DxDataGrid" /> class.</summary>
+            <param name="options">The options.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Elements.DxDataDoubleSortGrid.#ctor(Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions,Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Elements.DxDataGrid" /> class.</summary>
+            <param name="options">The options.</param>
+            <param name="options2">The options2.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Elements.DxDataDoubleMappingGrid.#ctor(Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions,Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Elements.DxDataGrid" /> class.</summary>
+            <param name="options">The options.</param>
+            <param name="options2">The options2.</param>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridButton.cssClass">
+            <summary>Specifies a CSS class to be applied to the button.</summary>
+            <value>The CSS class.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridButton.hint">
+            <summary>Specifies the text for the hint that appears when the button is hovered over or long-pressed.</summary>
+            <value>The hint.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridButton.icon">
+            <summary>Specifies the button's icon.</summary>
+            <remarks>
+            This option accepts one of the following:
+            
+            The icon's URL
+            The icon's name if the icon is from the DevExtreme icon library
+            The icon's CSS class if the icon is from an external icon library (see External Icon Libraries)
+            The icon in the Base64 format
+            The icon in the SVG format. Ensure that the source is reliable.
+            
+            </remarks>
+            <value>The icon.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridButton.onClick">
+            <summary>A function that is executed when the button is clicked or tapped. Not executed if a template is used.</summary>
+            <value>The on click.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridButton.name">
+            <summary>The name used to identify a built-in button.</summary>
+            <remarks>To configure a built-in button, assign its name to this option.</remarks>
+            <value>The name.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridButton.template">
+            <summary>Specifies a custom button template.</summary>
+            <value>The template.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridButton.text">
+            <summary>Specifies the button's text. Applies only if the button's icon is not specified.</summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridButton.visible">
+            <summary>Specifies the button's visibility.</summary>
+            <value>The visible.</value>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.HeaderFilterType.include">
+            <summary>Values in the header filter are unselected initially, and a user can select values to apply a filter.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.HeaderFilterType.exclude">
+            <summary>All values in the header filter are selected initially. A user can deselect values to change the filter.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.alignment">
+            <summary>Aligns the content of the column.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowEditing">
+            <summary>
+                Specifies whether a user can edit values in the column at runtime. By default, inherits the value of the
+                editing.allowUpdating option.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowExporting">
+            <summary>Specifies whether data from this column should be exported. Applies only if the column is visible.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowFiltering">
+            <summary>Specifies whether data can be filtered by this column. Applies only if filterRow.visible is true.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowFixing">
+            <summary>Specifies whether a user can fix the column at runtime. Applies only if columnFixing.enabled is true.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowGrouping">
+            <summary>Specifies whether the user can group data by values of this column. Applies only when grouping is enabled.</summary>
+            <remarks>
+                When grouping is enabled in the widget, the user can group data by values of any column. To prohibit a
+                particular column from being used for grouping, set the allowGrouping option of this column to false.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowHeaderFiltering">
+            <summary>
+                Specifies whether the header filter can be used to filter data by this column. Applies only if
+                headerFilter.visible is true. By default, inherits the value of the allowFiltering option.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowHiding">
+            <summary>
+                Specifies whether a user can hide the column using the column chooser at runtime. Applies only if
+                columnChooser.enabled is true.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowReordering">
+            <summary>
+                Specifies whether this column can be used in column reordering at runtime. Applies only if
+                allowColumnReordering is true.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowResizing">
+            <summary>Specifies whether a user can resize the column at runtime. Applies only if allowColumnResizing is true.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowSearch">
+            <summary>
+                Specifies whether this column can be searched. Applies only if searchPanel.visible is true. Inherits the value
+                of the allowFiltering option by default.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.allowSorting">
+            <summary>
+                Specifies whether a user can sort rows by this column at runtime. Applies only if sorting.mode differs from
+                "none".
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.autoExpandGroup">
+            <summary>
+                Specifies whether groups appear expanded or not when records are grouped by a specific column. Setting this
+                option makes sense only when grouping is allowed for this column.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.buttons">
+            <summary>
+            Allows you to customize buttons in the editing column or create a custom command column. Applies only if the column's type is "buttons".
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.caption">
+            <summary>Specifies a caption for the column.</summary>
+            <remarks>
+                Use this option to display a descriptive or friendly name for the column. If this option is not set, the
+                caption will be generated from the name of the dataField.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.cellTemplate">
+            <summary>Specifies a custom template for data cells.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.columns">
+            <summary>An array of grid columns.</summary>
+            <remarks>
+                Unlike normal columns, band columns do not hold data. Instead, they collect two or more columns under one
+                column header. To set up this layout, declare the band column using a hierarchical structure. For this, assign the
+                nested columns to the columns field of the band column. For example, the following code declares the "Address" band
+                column and nests three columns within it.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.cssClass">
+            <summary>Specifies a CSS class to be applied to the column.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.dataField">
+            <summary>Binds the column to a field of the dataSource.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.dataType">
+            <summary>Casts column values to a specific data type.</summary>
+            <remarks>
+                If a data field provides values of one data type, but the widget should cast them to another, specify the
+                proper type in this option.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.editCellTemplate">
+            <summary>Specifies a custom template for data cells in editing state.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.editorOptions">
+            <summary>Configures the default widget used for editing and filtering in the filter row.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.encodeHtml">
+            <summary>Specifies whether HTML tags are displayed as plain text or applied to the values of the column.</summary>
+            <remarks>When true, HTML tags are displayed as plain text; when false, they are applied to the values of the column.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.falseText">
+            <summary>
+                In a boolean column, replaces all false items with a specified text. Applies only if showEditorAlways option
+                is false.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterOperations">
+            <summary>Specifies a set of available filter operations. Applies only if filterRow.visible and allowFiltering are true</summary>
+            <remarks>
+                The following table lists available filters by data types. The same filters are assigned to columns of a
+                specific data type by default. dataType	filterOperations "string"	[ "contains", "notcontains", "startswith",
+                "endswith", "=", "&lt;&gt;" ] "numeric"	[ "=", "&lt;&gt;", "&lt;", "&gt;", "&lt;=", "&gt;=", "between" ] "date"	[
+                "=", "&lt;&gt;", "&lt;", "&gt;", "&lt;=", "&gt;=", "between" ] The filterOperations option can also accept an empty
+                array. In this case, the selected filter operation is "=" for all data types, and a user cannot change it.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterType">
+            <summary>
+                Specifies whether a user changes the current filter by including (selecting) or excluding (clearing the
+                selection of) values. Applies only if headerFilter.visible and allowHeaderFiltering are true.
+            </summary>
+            <remarks>
+                <para>This option changes when the user clicks the Select All checkbox in the header filter:</para>
+                <para>
+                    Select All filterType / filterValues<br /> filterType: "include"<br />filterValues: null<br /> filterType:
+                    "exclude"<br />filterValues: null
+                </para>
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterValue">
+            <summary>Specifies the column's filter value displayed in the filter row.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.filterValues">
+            <summary>Specifies values selected in the column's header filter.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.fixed">
+            <summary>Fixes the column.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.fixedPosition">
+            <summary>Specifies the widget's edge to which the column is fixed. Applies only if columns[].fixed is true.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.format">
+            <summary>Formats a value before it is displayed in a column cell.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.groupCellTemplate">
+            <summary>Specifies a custom template for group cells (group rows).</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.groupIndex">
+            <summary>Specifies the index of a column when grid records are grouped by the values of this column.</summary>
+            <remarks>
+                At runtime, the user can group grid records using the context menu or the group panel. But there may be cases
+                when grid records must be grouped initially. To do this, assign an integer value to the groupIndex option of those
+                columns that should be used for grouping grid records. For example, consider the following data source.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.headerCellTemplate">
+            <summary>Specifies a custom template for column headers.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.headerFilter">
+            <summary>Specifies data settings for the header filter.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.hidingPriority">
+            <summary>
+                Specifies the order in which columns are hidden when the widget adapts to the screen or container size.
+                Ignored if allowColumnResizing is true and columnResizingMode is "widget".
+            </summary>
+            <remarks>
+                The hidingPriority is a unique positive integer that ascends from right to left beginning with 0 by default.
+                Columns with low hidingPriority are hidden first.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.isBand">
+            <summary>Specifies whether the column bands other columns or not.</summary>
+            <remarks>
+                Unlike normal columns, band columns do not hold data. Instead, they collect two or more columns under one
+                column header. In most cases, to set up this layout, you can declare the band column using a hierarchical
+                structure. For example, the following code bands three columns under the "Address" header.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.lookup">
+            <summary>Specifies options of a lookup column.</summary>
+            <remarks>
+                A lookup column restricts the set of values that can be chosen when a user edits or filters the column. In a
+                lookup column, each cell is a drop-down menu. You can use a lookup column when you need to substitute displayed
+                values with required values. For example, consider that you have two arrays of objects: drivers and buses.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.minWidth">
+            <summary>Specifies the minimum width of the column.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.name">
+            <summary>Specifies the identifier of the column.</summary>
+            <remarks>
+                Set this option if you need to refer to the column in your code afterwards, for example, when changing a
+                column option.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.ownerBand">
+            <summary>
+                Specifies the band column that owns the current column. Accepts the index of the band column in the columns
+                array.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.renderAsync">
+            <summary>
+                Specifies whether to render the column after other columns and elements. Use if column cells have a complex
+                template. Requires the width option specified.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.selectedFilterOperation">
+            <summary>Specifies the column's filter operation displayed in the filter row.</summary>
+            <remarks>
+                Accepted Values: '&lt;' | '&lt;=' | '&lt;&gt;' | '=' | '&gt;' | '&gt;=' | 'between' | 'contains' | 'endswith'
+                | 'notcontains' | 'startswith'
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.showEditorAlways">
+            <summary>Specifies whether the column displays its values using editors.</summary>
+            <remarks>
+                A column cell has normal and editing states. In a normal state, the cell value is text. In the editing state,
+                the cell contains an editor that indicates the cell value and allows a user to edit it. In certain cases, a viewer
+                reads the cell value easier if it is indicated by an editor even in the normal state. For example, boolean values
+                are more comprehensible when they are indicated by check boxes. To display editors in cells permanently, set the
+                showEditorAlways option to true.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.showInColumnChooser">
+            <summary>Specifies whether the column chooser can contain the column header.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.showWhenGrouped">
+            <summary>Specifies whether or not to display the column when grid records are grouped by it.</summary>
+            <remarks>
+                Displaying a grouping column may be useful if you calculate its grouping values. Consider that you need to
+                group records by a column that contains dates. Grouping by full dates seems inconvenient. It would be smarter to
+                group by months or years instead. For this purpose, you calculate grouping values within the calculateGroupValue
+                function and leave the grouping column visible by setting the showWhenGrouped option to true so that the user can
+                view the full dates.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.sortIndex">
+            <summary>Specifies the index according to which columns participate in sorting.</summary>
+            <remarks>
+                This option accepts an integer specifying the index of the column in a collection of columns with applied
+                sorting. For example, consider the following data source that can provide data for three columns.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.sortOrder">
+            <summary>Specifies the sort order of column values.</summary>
+            <remarks>Accepted Values: undefined | 'asc' | 'desc'</remarks>
+            <remarks>
+                By default, rows are sorted according to the data source. Set the sortOrder option to sort rows in a required
+                order. If you need to sort by multiple columns, specify the sortIndex option as well, or otherwise, each sorted
+                column will get a sort index according to the position in the columns array.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.trueText">
+            <summary>
+                In a boolean column, replaces all true items with a specified text. Applies only if showEditorAlways option is
+                false.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.type">
+            <summary>Specifies the command column that this object customizes.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.validationRules">
+            <summary>Specifies validation rules to be checked when cell values are updated.</summary>
+            <value>The validation rules.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.visible">
+            <summary>Specifies whether the column is visible, that is, occupies space in the table.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.visibleIndex">
+            <summary>Specifies the position of the column regarding other columns in the resulting widget.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.width">
+            <summary>Specifies the column's width in pixels or as a percentage. Ignored if it is less than minWidth.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumn.isSecondaryGridDataSource">
+            <summary>Specifies whether the column should be used as a data source for a secondary grid.</summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnChooser">
+            <summary>Configures the column chooser.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnChooser.allowSearch">
+            <summary>Specifies whether searching is enabled in the column chooser.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnChooser.emptyPanelText">
+            <summary>Specifies text displayed by the column chooser when it is empty.</summary>
+            <remarks>Default Value: 'Drag a column here to hide it'.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnChooser.enabled">
+            <summary>Specifies whether a user can open the column chooser.Specifies whether a user can open the column chooser.</summary>
+            <remarks>
+                When this option is set to true, a user can open the column chooser with a click on the "Column Chooser" icon.
+                Otherwise, this icon is hidden, but you still can open the column chooser from code by calling the
+                showColumnChooser() method.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnChooser.height">
+            <summary>Specifies the height of the column chooser.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnChooser.mode">
+            <summary>Specifies how a user manages columns using the column chooser.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnChooser.searchTimeout">
+            <summary>
+                Specifies a delay in milliseconds between when a user finishes typing in the column chooser's search panel,
+                and when the search is executed.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnChooser.title">
+            <summary>Specifies the title of the column chooser.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnChooser.width">
+            <summary>Specifies the width of the column chooser.</summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFixing">
+            <summary>Configures the column chooser.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFixing.enabled">
+            <summary>Enables column fixing.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFixing.texts">
+            <summary>Contains options that specify texts for column fixing commands in the context menu of a column header.</summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFixing.GridColumnFixingTexts">
+            <summary>Contains options that specify texts for column fixing commands in the context menu of a column header.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFixing.GridColumnFixingTexts.fix">
+            <summary>Specifies text for the context menu item that fixes a column.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFixing.GridColumnFixingTexts.leftPosition">
+            <summary>Specifies text for the context menu subitem that fixes a column to the left edge of the widget.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFixing.GridColumnFixingTexts.rightPosition">
+            <summary>Specifies text for the context menu subitem that fixes a column to the right edge of the widget.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFixing.GridColumnFixingTexts.unfix">
+            <summary>Specifies text for the context menu item that unfixes a column.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFormat.type">
+            <summary>One of the predefined formats</summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFormat.precision">
+            <summary>Specifies a precision for values of a numeric format.</summary>
+            <value>The precision.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridColumnFormat.currency">
+            <summary>Specifies a 3-letter ISO 4217 code for currency. Applies only if the type is "currency".</summary>
+            <value>The currency.</value>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.GridEditMode.row">
+            <summary>A user edits one row at a time. The widget saves changes when the row leaves the editing state.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.GridEditMode.batch">
+            <summary>A user edits data cell by cell. The widget does not save changes until a user clicks the global "Save" button.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.GridEditMode.cell">
+            <summary>Differs from the batch mode in that the widget saves changes when the cell leaves the editing state.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.GridEditMode.form">
+            <summary>On entering the editing state, a row becomes a form with editable fields. The widget saves changes after a user clicks the "Save" button.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.GridEditMode.popup">
+            <summary>Differs from the form mode in that the form with editable fields is placed in a popup window. </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.allowAdding">
+            <summary>Specifies whether a user can add new rows.</summary>
+            <value>The allow adding.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.allowDeleting">
+            <summary>Specifies whether a user can delete rows. It is called for each data row when defined as a function.</summary>
+            <value>The allow deleting.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.allowUpdating">
+            <summary>Specifies whether a user can update rows. It is called for each data row when defined as a function.</summary>
+            <value>The allow updating.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.form">
+            <summary>Configures the form. Used only if editing.mode is "form" or "popup".</summary>
+            <value>The form.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.mode">
+            <summary>Specifies how a user edits data.</summary>
+            <value>The mode.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.popup">
+            <summary>Configures the popup. Used only if editing.mode is "popup".</summary>
+            <value>The popup.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.refreshMode">
+            <summary>Specifies operations that are performed after saving changes.</summary>
+            <value>The refresh mode.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.selectTextOnEditStart">
+            <summary>Specifies whether to select text in a cell when a user starts editing.</summary>
+            <value>The select text on edit start.</value>
+            <remarks>Default is false.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.startEditAction">
+            <summary>Specifies whether a single or double click should switch a cell to the editing state. Applies if editing.mode is "cell" or "batch".</summary>
+            <value>The start edit action.</value>
+            <remarks>Accepted Values: 'click' | 'dblClick'. Default Value: 'click'.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.texts">
+            <summary>Contains options that specify texts for editing-related UI elements.</summary>
+            <value>The texts.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditing.useIcons">
+            <summary>Specifies whether the editing column uses icons instead of links.</summary>
+            <value>The use icons.</value>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts">
+            <summary>
+            Contains options that specify texts for editing-related UI elements.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts.addRow">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts.cancelAllChanges">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts.cancelRowChanges">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts.confirmDeleteMessage">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts.confirmDeleteTitle">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts.deleteRow">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts.editRow">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts.saveAllChanges">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts.saveRowChanges">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts.undeleteRow">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridEditingTexts.validationCancelChanges">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridExport.enabled">
+            <summary>Adds the Export button to the DxDataGrid's toolbar.</summary>
+            <value>The enabled.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridExport.allowExportSelectedData">
+            <summary>Allows users to export selected rows only.</summary>
+            <value>The allow export selected data.</value>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterPanel">
+            <summary>Configures the filter panel feature.</summary>
+            <remarks>The filter panel displays the applied filter expression.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterPanel.filterEnabled">
+            <summary>Specifies whether the filter expression is applied.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterPanel.visible">
+            <summary>Indicates whether header filter icons are visible.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterPanel.texts">
+            <summary>Contains options that specify text for various elements of the popup menu.</summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterPanelTexts">
+            <summary>
+            Specifies texts for the filter panel's elements.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterPanelTexts.clearFilter">
+            <summary>The text of the "Clear" link.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterPanelTexts.createFilter">
+            <summary>The text of the "Create Filter" link.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterPanelTexts.filterEnabledHint">
+            <summary>The hint of the checkbox that applies the filter.</summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterRow">
+            <summary>Configures the filter row.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterRow.applyFilterText">
+            <summary>Specifies text for a hint that appears when a user pauses on a button that applies the filter.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterRow.betweenEndText">
+            <summary>
+                Specifies a placeholder for the editor that specifies the end of a range when a user selects the "between"
+                filter operation.
+            </summary>
+            <remarks>Default Value: 'End'.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterRow.betweenStartText">
+            <summary>
+                Specifies a placeholder for the editor that specifies the start of a range when a user selects the "between"
+                filter operation.
+            </summary>
+            <remarks>Default Value: 'Start'.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterRow.operationDescriptions">
+            <summary>Specifies descriptions for filter operations on the filter list.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterRow.resetOperationText">
+            <summary>Specifies text for the reset operation on the filter list.</summary>
+            <remarks>Default Value: 'Reset'.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterRow.showAllText">
+            <summary>
+                Specifies text for the item that clears the applied filter. Used only when a cell of the filter row contains a
+                select box.
+            </summary>
+            <remarks>Default Value: '(All)'.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterRow.showOperationChooser">
+            <summary>Specifies whether icons that open the filter lists are visible.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridFilterRow.visible">
+            <summary>Specifies whether the filter row is visible.</summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGrouping">
+            <summary>Configures the filter row.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGrouping.allowCollapsing">
+            <summary>Specifies whether the user can collapse grouped records in a grid or not.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGrouping.autoExpandAll">
+            <summary>Specifies whether groups appear expanded or not.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGrouping.contextMenuEnabled">
+            <summary>Enables the user to group data using the context menu.</summary>
+            <remarks>Set this option to true to enable grouping using the context menu. In this case, to group/ungroup data, the user right-clicks a column header and chooses the required item from the appeared context menu.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGrouping.expandMode">
+            <summary>Specifies the event on which a group will be expanded/collapsed.</summary>
+            <remarks>By default, to expand/collapse a group, the user clicks its expand/collapse button. On small-screen devices, this approach may impair the user experience. As an alternative, consider expanding/collapsing a group by a click on the group row. For this purpose, assign "rowClick" to the grouping.expandMode property.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGrouping.texts">
+            <summary>Defines the texts of grouping-related visual elements.</summary>
+            <remarks>Use the options of this object to localize or customize grouping-related elements. For example, the groupByThisColumn, ungroup and ungroupAll options customize items of the context menu. These items appear in the menu only if the grouping.contextMenuEnabled option is set to true.</remarks>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGroupingTexts">
+            <summary>
+            Defines the texts of grouping-related visual elements.
+            </summary>
+            <remarks>Use the options of this object to localize or customize grouping-related elements. For example, the groupByThisColumn, ungroup and ungroupAll options customize items of the context menu. These items appear in the menu only if the grouping.contextMenuEnabled option is set to true.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGroupingTexts.groupByThisColumn">
+            <summary>Specifies the text of the context menu item that groups data by a specific column.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGroupingTexts.groupContinuedMessage">
+            <summary>Specifies the message displayed in a group row when the corresponding group is continued from the previous page.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGroupingTexts.groupContinuesMessage">
+            <summary>Specifies the message displayed in a group row when the corresponding group continues on the next page.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGroupingTexts.ungroup">
+            <summary>Specifies the text of the context menu item that clears grouping settings of a specific column.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridGroupingTexts.ungroupAll">
+            <summary>Specifies the text of the context menu item that clears grouping settings of all columns.</summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridHeaderFilter">
+            <summary>Configures the header filter feature.</summary>
+            <remarks>A header filter allows a user to filter values in an individual column by including/excluding them in/from the applied filter. A click on a header filter icon invokes a popup menu with all unique values in the column. By selecting or clearing the selection of values in this menu, the user includes/excludes them in/from the filter.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridHeaderFilter.allowSearch">
+            <summary>Specifies whether searching is enabled in the header filter.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridHeaderFilter.height">
+            <summary>Specifies the height of the popup menu that contains values for filtering.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridHeaderFilter.searchTimeout">
+            <summary>Specifies a delay in milliseconds between when a user finishes typing in the header filter's search panel, and when the search is executed.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridHeaderFilter.visible">
+            <summary>Indicates whether header filter icons are visible.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridHeaderFilter.texts">
+            <summary>Contains options that specify text for various elements of the popup menu.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridHeaderFilter.width">
+            <summary>Specifies the width of the popup menu that contains values for filtering.</summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridHeaderFilterTexts">
+            <summary>
+            Contains options that specify text for various elements of the popup menu.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridHeaderFilterTexts.cancel">
+            <summary>Specifies text for the button that closes the popup menu without applying a filter.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridHeaderFilterTexts.emptyValue">
+            <summary>Specifies a name for the item that represents empty values in the popup menu.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridHeaderFilterTexts.ok">
+            <summary>Specifies text for the button that applies the specified filter.</summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridLookup">
+            <summary>Specifies options of a lookup column.</summary>
+            <remarks>
+                A lookup column restricts the set of values that can be chosen when a user edits or filters the column. In a
+                lookup column, each cell is a drop-down menu. You can use a lookup column when you need to substitute displayed
+                values with required values.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridLookup.allowClearing">
+            <summary>Specifies whether to display the Clear button in lookup column cells while they are being edited.</summary>
+            <remarks>Set this option to true only if your data source accepts null values.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridLookup.dataSource">
+            <summary>Specifies the data source for the lookup column.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridLookup.displayExpr">
+            <summary>Specifies the data source field whose values must be displayed.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridLookup.valueExpr">
+            <summary>Specifies the data source field whose values must be replaced.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridMasterDetail.autoExpandAll">
+            <summary>Specifies whether detail sections appear expanded or collapsed.</summary>
+            <value>The automatic expand all.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridMasterDetail.enabled">
+            <summary>Enables an end-user to expand/collapse detail sections.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridMasterDetail.template">
+            <summary>Specifies a custom template for detail sections.</summary>
+            <value>The template.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridMasterDetail.detailGridOptions">
+            <summary>Specifies the detail grid options.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.accessKey">
+            <summary>Specifies the shortcut key that sets focus on the widget.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.activeStateEnabled">
+            <summary>Specifies whether or not the widget changes its state when interacting with a user.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.allowColumnReordering">
+            <summary>Specifies whether a user can reorder columns.Specifies whether a user can reorder columns.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.allowColumnResizing">
+            <summary>Specifies whether a user can resize columns.Specifies whether a user can resize columns.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.autoNavigateToFocusedRow">
+            <summary>Automatically scrolls to the focused row when the focusedRowKey is changed.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.cacheEnabled">
+            <summary>Specifies whether data should be cached.Specifies whether data should be cached.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.cellHintEnabled">
+            <summary>Enables a hint that appears when a user hovers the mouse pointer over a cell with truncated content.</summary>
+            <remarks>
+                The cell's content may be truncated if the width of the cell's column becomes very small. In this case, when a
+                user hovers the mouse pointer over such a cell, a hint containing the cell's value appears. To disable cell hints,
+                assign false to the cellHintEnabled option.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.columnAutoWidth">
+            <summary>Specifies whether columns should adjust their widths to the content.</summary>
+            <remarks>
+                When this option is set to true, all columns adjust their width to the content. If the widget's overall
+                content is narrower than the widget's width, the columns are stretched to fit the widget. To avoid this, set the
+                columns.width option to "auto". If the content is wider, the columnAutoWidth option set to true causes horizontal
+                scrolling. You can set the allowHiding option to false for columns you want to be displayed continuously. When the
+                columnAutoWidth option is set to false, all columns have identical width, which in turn depends on the width of the
+                widget.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.columnChooser">
+            <summary>Configures the column chooser.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.columnFixing">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.columnHidingEnabled">
+            <summary>
+                Specifies whether the widget should hide columns to adapt to the screen or container size. Ignored if
+                allowColumnResizing is true and columnResizingMode is "widget".
+            </summary>
+            <remarks>
+                This option set to true makes the widget hide certain columns automatically if all the columns do not fit the
+                widget's width. Columns with low hidingPriority are hidden first. These are the rightmost (leftmost if rtlEnabled
+                is true) columns by default. Information from hidden columns is available in an adaptive detail row.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.columnMinWidth">
+            <summary>Specifies the minimum width of columns.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.ColumnResizingMode.nextColumn">
+            <summary>When a user resizes a column, the width of the next column changes.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.ColumnResizingMode.widget">
+            <summary>
+                When a user resizes a column, the width of the widget changes. This mode is ignored if you specify the width
+                of any column in percent.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.columnResizingMode">
+            <summary>Specifies how the widget resizes columns. Applies only if allowColumnResizing is true.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.columns">
+            <summary>An array of grid columns.</summary>
+            <remarks>
+                By default, a column is created for each field of a data source object, but in most cases, it is redundant. To
+                specify a set of columns to be created in a grid, assign an array specifying these columns to the columns option.
+                Each grid column is represented in this array by an object containing column settings or by a data source field
+                that this column is bound to. Detailed information on specifying grid columns is given in the Columns Overview
+                article. Column options define the behavior and appearance of a grid column. One of the other capabilities allows
+                you to control the sorting of column values using the allowSorting and sortOrder options, apply a filter to grid
+                records using the allowFiltering and filterOperations options, and group grid records using the allowGrouping and
+                groupIndex options. In addition, you can change the visibility and width of a column using corresponding options.
+                To get or set an option or several options for a column at runtime, use the columnOption method with the required
+                arguments.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.columnWidth">
+            <summary>Specifies the width for all data columns. Has a lower priority than the column.width option.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.dataSource">
+            <summary>Binds the widget to data</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.dateSerializationFormat">
+            <summary>
+                Specifies the format in which date-time values should be sent to the server. Use it only if you do not specify
+                the dataSource at design time.
+            </summary>
+            <remarks>
+                Without a data source, the widget cannot detect the date-time values' format. In this case, specify the
+                dateSerializationFormat option that supports the following formats: "yyyy-MM-dd" - a local date
+                "yyyy-MM-ddTHH:mm:ss" - local date and time "yyyy-MM-ddTHH:mm:ssZ" - the UTC date and time "yyyy-MM-ddTHH:mm:ssx" -
+                date and time with a timezone This option applies only if the forceIsoDateParsing field is set to true in the
+                global configuration object.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.disabled">
+            <summary>Specifies whether the widget responds to user interaction.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.editing">
+            <summary>Configures editing.</summary>
+            <remarks>
+                The widget can allow a user to add, update and delete data. To control which of these operations are allowed,
+                use the allowAdding, allowUpdating and allowDeleting options. Editing can be carried out in different modes, which
+                are detailed in the mode option's description.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.errorRowEnabled">
+            <summary>Indicates whether to show the error row.</summary>
+            <remarks>
+                The error row displays data-related errors that may occur on the server during the widget's runtime. Setting
+                this option to false hides the error row, but the errors can still be viewed in the browser's console.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.export">
+            <summary>Configures client-side exporting.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.filterPanel">
+            <summary>Configures the filter panel.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.filterRow">
+            <summary>Configures the filter row.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.filterSyncEnabled">
+            <summary>
+                Specifies whether to synchronize the filter row, header filter, and filter builder. The synchronized filter
+                expression is stored in the filterValue option.Specifies whether to synchronize the filter row, header filter, and
+                filter builder. The synchronized filter expression is stored in the filterValue option.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.filterValue">
+            <summary>Specifies a filter expression.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.focusedColumnIndex">
+            <summary>The index of the column that contains the focused data cell.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.focusedRowEnabled">
+            <summary>Specifies whether the focused row feature is enabled.</summary>
+            <remarks>
+                When this option is set to true, the following applies: Rows are initially sorted by keys if any field of
+                remoteOperations is true. The row with focusedRowIndex or focusedRowKey is highlighted. When the data row area is
+                focused, this row is focused and the area is scrolled down to it. The onFocusedRowChanging and onFocusedRowChanged
+                functions become active.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.focusedRowIndex">
+            <summary>Specifies the initially or currently focused grid row's index. Use it when focusedRowEnabled is true.</summary>
+            <remarks>
+                The focused row has a key and index on a page. When the pager is used for navigation, the focused row's index
+                persists from page to page but corresponds to a different row with a different key on each page. The default index,
+                -1, means that no row is focused. The focusedRowKey takes precedence over the focusedRowIndex when both are
+                specified.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.focusedRowKey">
+            <summary>Specifies initially or currently focused grid row's key. Use it when focusedRowEnabled is true.</summary>
+            <remarks>
+                The focused row has a key and index on a page. When the pager is used for navigation, the focused row's index
+                persists from page to page but corresponds to a different row with a different key on each page. In the DxDataGrid,
+                group rows can also be focused. See the Group Index and Key topic for more information on how group keys are
+                formed.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.focusStateEnabled">
+            <summary>Specifies whether the widget can be focused using keyboard navigation.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.grouping">
+            <summary>Configures grouping.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.onChangeCommand">
+            <summary>Configures change command.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.groupPanel">
+            <summary>Configures the group panel.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.headerFilter">
+            <summary>Configures the header filter feature.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.highlightChanges">
+            <summary>Specifies whether to highlight rows and cells with edited data. repaintChangesOnly should be true.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.hint">
+            <summary>Specifies text for a hint that appears when a user pauses on the widget.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.hoverStateEnabled">
+            <summary>Specifies whether to highlight rows when a user moves the mouse pointer over them.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.keyboardNavigation">
+            <summary>Configures keyboard navigation.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.keyExpr">
+            <summary>
+                Specifies the key property (or properties) that provide(s) key values to access data items. Each key value
+                must be unique. This option applies only if data is a simple array.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.loadPanel">
+            <summary>Configures the load panel.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.masterDetail">
+            <summary>Allows you to build a master-detail interface in the grid.</summary>
+            <remarks>
+                In DxDataGrid, a master-detail interface supplies a usual data row with an expandable section that contains the
+                details on this data row. In that case, the data row is called "master row", while the section is called "detail
+                section". To enable the master-detail interface, assign true to the masterDetail.enabled option. After that,
+                specify the template for detail sections using the masterDetail.template option. Templates allow you to place
+                virtually anything into the detail sections. For example, you can display another DxDataGrid or any other UI widget
+                there. For more information on specifying the template for the detail sections, see the template option
+                description.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.noDataText">
+            <summary>Specifies text shown when the widget does not display any data.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.pager">
+            <summary>Configures the pager.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.paging">
+            <summary>Configures paging.</summary>
+            <remarks>
+                Paging allows the widget to load data in portions instead of loading it simultaneously. To enable paging, set
+                the paging.enabled option to true. Users can switch between pages and change paging settings using the pager or
+                they can scroll the pages. Paging settings apply with any scrolling mode.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.remoteOperations">
+            <summary>Notifies the DxDataGrid of the server's data processing operations.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.renderAsync">
+            <summary>
+                Specifies whether to render the filter row, command columns, and columns with showEditorAlways set to true
+                after other elements.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.repaintChangesOnly">
+            <summary>Specifies whether to repaint only those cells whose data changed.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.rowAlternationEnabled">
+            <summary>Specifies whether rows should be shaded differently.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.rowDragging">
+            <summary>Configures row reordering using drag and drop gestures.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.rowTemplate">
+            <summary></summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.scrolling">
+            <summary>Configures scrolling.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.searchPanel">
+            <summary>Configures the search panel.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.selectedRowKeys">
+            <summary>Allows you to select rows or determine which rows are selected. Applies only if selection.deferred is false.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.selection">
+            <summary>Configures runtime selection.</summary>
+            <remarks>
+                A user can select rows in a single or multiple mode. In multiple mode, a user can select all rows at once. To
+                disable this feature, assign false to the allowSelectAll. By default, once a user selects a row, the data source is
+                instantly notified about it. This may lower the widget performance if the data source is remote and the user is
+                allowed to select all rows at once. In this case, we recommend making the selection deferred.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.selectionFilter">
+            <summary>Specifies filters for the rows that must be selected initially. Applies only if selection.deferred is true.</summary>
+            <remarks>
+                This option also allows you to obtain filter expressions for the currently selected rows. Note that if all
+                records are selected, the selectionFilter value is null. If there are no selected records, the value contains an
+                empty array.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.showBorders">
+            <summary>Specifies whether the outer borders of the widget are visible.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.showColumnHeaders">
+            <summary>Specifies whether column headers are visible.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.showColumnLines">
+            <summary>Specifies whether vertical lines that separate one column from another are visible.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.showRowLines">
+            <summary>Specifies whether horizontal lines that separate one row from another are visible.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.sortByGroupSummaryInfo">
+            <summary>Allows you to sort groups according to the values of group summary items.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.sorting">
+            <summary>Configures runtime sorting.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.stateStoring">
+            <summary>Configures state storing.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.summary">
+            <summary>Specifies the options of the grid summary</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.tabIndex">
+            <summary>Specifies the number of the element when the Tab key is used for navigating.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.twoWayBindingEnabled">
+            <summary>Specifies whether to enable two-way data binding.</summary>
+            <remarks>
+                Two-way data binding ensures that the UI tracks changes made in the data source by a 3rd-party component, and
+                vice versa. This way, the widget and its data source stay synchronized. If you implement two-way data binding in
+                the widget on your own using the cellTemplate and/or editCellTemplate options, make sure to set the
+                twoWayBindingEnabled option to false.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.visible">
+            <summary>Specifies whether the widget is visible.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridOptions.wordWrapEnabled">
+            <summary>Specifies whether text that does not fit into a column should be wrapped.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPaging.enabled">
+            <summary>Enables paging.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPaging.pageIndex">
+            <summary>Specifies the page to be displayed using a zero-based index.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPaging.pageSize">
+            <summary>Specifies the page size.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.applyValueMode">
+            <summary>Specifies the way an end-user applies the selected value.</summary>
+            <value>The apply value mode.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.accessKey">
+            <summary>Specifies the shortcut key that sets focus on the widget.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.closeOnOutsideClick">
+            <summary>Specifies whether to close the widget if a user clicks outside it.</summary>
+            <value>The close on outside click.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.deferRendering">
+            <summary>Specifies whether to render the widget's content when it is displayed. If false, the content is rendered immediately.</summary>
+            <value>The defer rendering.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.disabled">
+            <summary>Specifies whether the widget responds to user interaction.</summary>
+            <value>The disabled.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.dragEnabled">
+            <summary>Specifies whether or not to allow a user to drag the popup window.</summary>
+            <value>The drag enabled.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.focusStateEnabled">
+            <summary>Specifies whether the widget can be focused using keyboard navigation.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.fullScreen">
+            <summary>Specifies whether to display the Popup in full-screen mode.</summary>
+            <value>The full screen.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.height">
+            <summary>Specifies the widget's height in pixels.</summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.hint">
+            <summary>Specifies text for a hint that appears when a user pauses on the widget.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.hoverStateEnabled">
+            <summary>Specifies whether to highlight rows when a user moves the mouse pointer over them.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.keyboardNavigation">
+            <summary>Configures keyboard navigation.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.maxHeight">
+            <summary>Specifies the maximum height the widget can reach while resizing.</summary>
+            <value>The maximum height.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.maxWidth">
+            <summary>Specifies the maximum width the widget can reach while resizing.</summary>
+            <value>The maximum width.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.minHeight">
+            <summary>Specifies the minimum height the widget can reach while resizing.</summary>
+            <value>The minimum height.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.minWidth">
+            <summary>Specifies the minimum width the widget can reach while resizing.</summary>
+            <value>The minimum width.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.position">
+            <summary>Positions the widget.</summary>
+            <value>The position.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.repaintChangesOnly">
+            <summary>Specifies whether to repaint only those cells whose data changed.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.rowAlternationEnabled">
+            <summary>Specifies whether rows should be shaded differently.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.rowDragging">
+            <summary>Configures row reordering using drag and drop gestures.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.resizeEnabled">
+            <summary>Specifies whether or not an end user can resize the widget.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.rtlEnabled">
+            <summary>Switches the widget to a right-to-left representation.</summary>
+            <value>The RTL enabled.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.shading">
+            <summary>Specifies whether to shade the background when the widget is active.</summary>
+            <value>The shading.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.shadingColor">
+            <summary>Specifies the shading color. Applies only if shading is enabled.</summary>
+            <value>The color of the shading.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.showCloseButton">
+            <summary>Specifies whether or not the widget displays the Close button.</summary>
+            <value>The show close button.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.showTitle">
+            <summary>A Boolean value specifying whether or not to display the title in the popup window.</summary>
+            <value>The show title.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.tabIndex">
+            <summary>Specifies the number of the element when the Tab key is used for navigating.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.title">
+            <summary>The title in the overlay window.</summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.visible">
+            <summary>Specifies whether the widget is visible.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridPopupOptions.width">
+            <summary>Specifies the widget's width in pixels.</summary>
+            <value>The width.</value>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging">
+            <summary>Configures row dragging and reordering.</summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.DropFeedbackMode">
+            <summary>
+            Specifies how to highlight the row's drop position.
+            </summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.DropFeedbackMode.indicate">
+            <summary>Rows do not animate, a blue square appears at the place where the dragged row is going to be placed.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.DropFeedbackMode.push">
+            <summary>Rows move apart with animation, making free space for the dragged row to be placed.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.allowDropInsideItem">
+            <summary>Allows users to drop a row inside another row.</summary>
+            <value>The allow drop inside item.</value>
+            <remarks>This option allows users to drop rows only in the UI. You should also handle drag-and-drop in code.
+            If users drag and drop rows inside a single component, use the onReorder handler.
+            To allow users to drag and drop rows between components, use the onAdd handler.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.allowReordering">
+            <summary>Allows row reordering using drag and drop gestures.</summary>
+            <value>The allow reordering.</value>
+            <remarks>This option only enables dragging. You should also implement the reordering logic in the onReorder
+            handler to enable row reordering inside a component. If you need to perform cross-component drag-and-drop,
+            implement the dragging logic in the onAdd handler.This option only enables dragging. You should also
+            implement the reordering logic in the onReorder handler to enable row reordering inside a component.
+            If you need to perform cross-component drag-and-drop, implement the dragging logic in the onAdd handler.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.animation">
+            <summary>Gets or sets the animation in dropfeedbackmode push.</summary>
+            <value>The animation configuration.</value>
+            <remarks>This is not officially documented.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.autoScroll">
+            <summary>Enables automatic scrolling while dragging a row beyond the viewport.</summary>
+            <value>The automatic scroll.</value>
+            <remarks>Default: true.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.boundary">
+            <summary>Specifies a DOM element that limits the dragging area.</summary>
+            <value>The boundary.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.container">
+            <summary>Specifies a custom container in which the draggable row should be rendered.</summary>
+            <value>The container.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.cursorOffset">
+            <summary>Specifies the cursor offset from the dragged row.</summary>
+            <value>The cursor offset.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.data">
+            <summary>A container for custom data.</summary>
+            <value>The data.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.dragDirection">
+            <summary>Specifies the directions in which a row can be dragged.</summary>
+            <value>The drag direction.</value>
+            <remarks>Default Value: 'both'.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.dropFeedbackMode">
+            <summary>Specifies how to highlight the row's drop position.</summary>
+            <value>The drop feedback mode.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.filter">
+            <summary>Specifies a CSS selector for draggable rows.</summary>
+            <value>The filter.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.group">
+            <summary>Allows you to group several widgets so that users can drag and drop rows between them.</summary>
+            <value>The group.</value>
+            <remarks>Set this option to identical values for the widgets you want to collect in a single group.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.handle">
+            <summary>Specifies a CSS selector (ID or class) for the element(s) that should act as the drag handle(s).</summary>
+            <value>The handle.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.scrollSensitivity">
+            <summary>Specifies the distance in pixels from the edge of viewport at which scrolling should start. Applies only if autoScroll is true.</summary>
+            <value>The scroll sensitivity.</value>
+            <remarks>Default Value: 60.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.scrollSpeed">
+            <summary>Specifies the scrolling speed when dragging a row beyond the viewport. Applies only if autoScroll is true.</summary>
+            <value>The scroll speed.</value>
+            <remarks>Default Value: 30.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridRowDragging.showDragIcons">
+            <summary>Shows or hides row dragging icons.</summary>
+            <value>The show drag icons.</value>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling">
+            <summary>
+                Scrolling allows a user to browse data left outside the current viewport. The widget provides several
+                scrolling modes detailed in the mode option description.
+            </summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.ColumnRenderingMode.standard">
+            <summary>Renders all columns at once.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.ColumnRenderingMode.virtual">
+            <summary>Renders only those columns that get into the viewport.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.RowRenderingMode.standard">
+            <summary>Renders all the loaded rows at once.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.RowRenderingMode.virtual">
+            <summary>
+                Renders only those rows that get into the viewport. Use this mode if the pageSize is large. Rows that are
+                being currently rendered can be shown as grey boxes.
+            </summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.ScrollingMode.standard">
+            <summary>
+                A user scrolls a single page only. Scrolling is available only if all the page's rows do not fit into the
+                widget's height. In this mode, the pager performs the main navigation and scrolling is auxiliary. If paging is
+                disabled, the widget loads all rows simultaneously which can reduce the widget's performance. In this case, we
+                recommend that you use another scrolling mode.
+            </summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.ScrollingMode.infinite">
+            <summary>
+                Each next page is loaded once the scrollbar reaches the end of its scale. In this mode, users scroll data
+                gradually from the first to the last page.
+            </summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.ScrollingMode.virtual">
+            <summary>
+                Rows are loaded when they get into the viewport and removed once they leave it. If the rows take time to be
+                loaded and rendered, they display gray boxes. Rendering optimization can reduce rendering time and remove gray
+                boxes. In this mode, users can move to any page instantly.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.columnRenderingMode">
+            <summary>
+                Specifies the rendering mode for columns. Applies when columns are left outside the viewport. Requires the
+                columnWidth, columnAutoWidth, or width (for all columns) option specified.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.mode">
+            <summary>Specifies the scrolling mode.</summary>
+            <remarks>
+                Regardless of the scrolling mode, you can use the paging.pageSize option to specify the number of rows on a
+                page.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.preloadEnabled">
+            <summary>
+                Specifies whether the widget should load adjacent pages. Applies only if scrolling.mode is "virtual" or
+                "infinite".
+            </summary>
+            <remarks>
+                In virtual and infinite scrolling modes, pages are loaded on demand. If you set this option to true, the
+                adjacent pages are loaded in advance for smoother scrolling. This option can reduce the performance on older
+                devices.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.rowRenderingMode">
+            <summary>Specifies the rendering mode for loaded rows.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.scrollByContent">
+            <summary>Specifies whether a user can scroll the content with a swipe gesture. Applies only if useNative is false.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.scrollByThumb">
+            <summary>Specifies whether a user can scroll the content with the scrollbar. Applies only if useNative is false.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.showScrollbar">
+            <summary>Specifies when to show scrollbars. Applies only if useNative is false.</summary>
+            <remarks>
+                The scrollbars help to scroll the content vertically and horizontally. Vertical scrolling is available when
+                all the rows do not fit in the widget's height. Horizontal scrolling is available when all the columns do not fit
+                in the widget's width, which can happen when columns have fixed widths or the columnAutoWidth option is set to
+                true.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridScrolling.useNative">
+            <summary>Specifies whether the widget should use native or simulated scrolling.</summary>
+            <remarks>
+                By default, the widget employs native scrolling on most platforms, except non-Mac desktops and devices based
+                on Android older than version 4. To employ native scrolling on all platforms without exception, assign true to this
+                option. If you assign false, the widget simulates scrolling on all platforms.By default, the widget employs native
+                scrolling on most platforms, except non-Mac desktops and devices based on Android older than version 4. To employ
+                native scrolling on all platforms without exception, assign true to this option. If you assign false, the widget
+                simulates scrolling on all platforms.
+            </remarks>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection">
+            <summary>Configures runtime selection.</summary>
+            <remarks>
+                A user can select rows in a single or multiple mode. In multiple mode, a user can select all rows at once. To
+                disable this feature, assign false to the allowSelectAll. By default, once a user selects a row, the data source is
+                instantly notified about it. This may lower the widget performance if the data source is remote and the user is
+                allowed to select all rows at once. In this case, we recommend making the selection deferred.
+            </remarks>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.SelectionMode.none">
+            <summary>The none</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.SelectionMode.single">
+            <summary>Only one row can be in the selected state at a time.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.SelectionMode.multiple">
+            <summary>Several rows can be in the selected state at a time.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.SelectAllMode.allPages">
+            <summary>Selects records on all pages.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.SelectAllMode.page">
+            <summary>Selects records on currently rendered page.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.ShowCheckBoxesMode.onClick">
+            <summary>
+                Check boxes appear once a user clicks anywhere in the selection column, or if two or more rows are selected
+                programmatically or using keyboard shortcuts. Check boxes disappear once rows selection is canceled.
+            </summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.ShowCheckBoxesMode.none">
+            <summary>Check boxes are always hidden, which means that selection is always single-like in this mode.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.ShowCheckBoxesMode.always">
+            <summary>
+                The selection column with all the check boxes is always visible. A user can select a row by clicking the check
+                box or its grid cell, but not the row itself.
+            </summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.ShowCheckBoxesMode.onLongTap">
+            <summary>The selection column with all the check boxes appears and disappears on long tap, and on click and hold.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.allowSelectAll">
+            <summary>Specifies whether a user can select all rows at once.</summary>
+            <remarks>
+                If this option is set to true, it allows a user to select all rows at once by pressing Ctrl + A or clicking
+                the check box in the selection column's header. The "Select All" check box also allows a user to deselect all rows.
+                The select all functionality allows selecting/deselecting only those rows that meet filtering conditions if a
+                filter is applied. If this option is set to false, it disables the select all functionality. In this case, the
+                check box clears selection and is hidden if no rows are selected.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.mode">
+            <summary>Specifies the selection mode.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.deferred">
+            <summary>Makes selection deferred.</summary>
+            <remarks>
+                Consider making selection deferred if the widget needs to operate a large volume of data and the user is
+                allowed to select all rows at once. Unlike usual (or "instant") selection, in the case of deferred selection, the
+                widget requests data only when you demand this using the API, for example, when the getSelectedRowsData() or
+                getSelectedRowKeys() method is called. This mode has certain specifics that determine the API you need to use. For
+                more information, see the Deferred Selection article.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.selectAllMode">
+            <summary>Specifies the mode in which all the records are selected. Applies only if selection.allowSelectAll is true.</summary>
+            <remarks>
+                selectAllMode specifies how records should be selected on clicking the "Select All" check box and by calling
+                the selectAll()/deselectAll() methods. The following modes are available.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSelection.showCheckBoxesMode">
+            <summary>Specifies when to display check boxes in rows. Applies only if selection.mode is "multiple".</summary>
+            <remarks>
+                The selection behavior in multiple mode depends on the check boxes' visibility. Selection is proper multiple
+                only when check boxes are visible. In other cases, the selection behavior resembles the single mode: clicking (or
+                tapping) a row selects it, but cancels the selection of other rows. However, a user still can select multiple rows
+                in this mode using a click and hold, or long tap.
+            </remarks>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSorting">
+            <summary>Configures the filter row.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSorting.GridSortingMode.single">
+            <summary>Rows can be sorted by values of a single column only.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSorting.GridSortingMode.multiple">
+            <summary>Rows can be sorted by values of several columns.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSorting.GridSortingMode.none">
+            <summary>No sorting.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSorting.mode">
+            <summary>Specifies the sorting mode.</summary>
+            <value>The mode.</value>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummary">
+            <summary>Configures the filter row.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummary.groupItems">
+            <summary>Specifies items of the group summary.</summary>
+            <remarks>
+            The group summary provides a synopsis of a group of data. Groups of data are formed in the process of grouping.
+            The group summary contains several items. Each item displays a value that is a product of applying an aggregate
+            function to a group of data.
+            
+            To specify the items of the group summary, declare an array of objects, each of which contains at least two fields:
+            column and summaryType. The column field specifies the identifier of the column that provides data for an aggregate
+            function. The summaryType specifies the aggregate function to be applied. 
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummary.recalculateWhileEditing">
+            <summary>Specifies whether to recalculate summaries while a user edits data.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummary.skipEmptyValues">
+            <summary>Specifies whether or not to skip empty strings, null and undefined values when calculating a summary.</summary>
+            <remarks>
+            Specified in the summary object, this option affects all summaries in the grid. In addition, the same option can be specified
+            for an individual summary. It will override the global setting.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummaryGroupItem.alignByColumn">
+            <summary>Indicates whether to display group summary items in parentheses after the group row header or to align them by the corresponding columns within the group row.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummaryGroupItem.column">
+            <summary>Specifies the column that provides data for a group summary item.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummaryGroupItem.displayFormat">
+            <summary>Specifies the summary item's text.</summary>
+            <remarks>
+            You can use the following position markers in this text:
+            
+            {0} - formatted summary value.
+            {1} - the parent column's caption. Available if the showInColumn option is specified.
+            
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummaryGroupItem.name">
+            <summary>Specifies the group summary item's identifier.</summary>
+            <remarks>Use this name to access the summary item in callback functions like calculateCustomSummary.</remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummaryGroupItem.showInColumn">
+            <summary>Specifies the column that must hold the summary item when this item is displayed in the group footer or aligned by a column in the group row.</summary>
+            <remarks>
+            A group summary item can be forced to be displayed in the group row by the column that provides data for this item.
+            Alternatively, you can place an item to the group footer where the item is also held by the column that provides data for it.
+            If you need to place an item in another column, assign the name, data field or caption of this column to the showInColumn option.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummaryGroupItem.showInGroupFooter">
+            <summary>pecifies whether or not a summary item must be displayed in the group footer.</summary>
+            <remarks>
+            By default, summary items are displayed as a part of a group row. If you need a summary item to be displayed in the group footer,
+            assign true to the showInGroupFooter option of this item. This summary item will be located in the column that provides data for it.
+            If you want another column to hold the summary item, specify the showInColumn option of this item.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummaryGroupItem.skipEmptyValues">
+            <summary>Specifies whether or not to skip empty strings, null and undefined values when calculating a summary.</summary>
+            <remarks>
+            Specified in a summary configuration object, this option affects an individual summary item.
+            If you need to apply a single setting to all summaries in a grid,
+            specify the skipEmptyValues option in the summary object.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummaryGroupItem.summaryType">
+            <summary>Specifies how to aggregate data for the group summary item.</summary>
+            <remarks>
+            Use the SummaryType enum to specify this option when the widget is used as an ASP.NET MVC 5 Control or a DevExtreme-Based
+            ASP.NET Core Control. This enum accepts the following values: Sum, Min, Max, Avg, Count, and Custom.
+            To apply a custom server-side aggregate function, use a string overload instead.
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxGridSummaryGroupItem.valueFormat">
+            <summary>Specifies a summary item value's display format.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxSelectBoxOptions.ApplyValueModes.instantly">
+            <summary>Applies the selected value immediately after a user clicks the required value in the drop-down menu. To cancel the selection, click outside the drop-down menu.</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.DxGrid.DxSelectBoxOptions.ApplyValueModes.useButtons">
+            <summary>Enables an end-user to apply the selected value or cancel the selection using the Apply and Cancel buttons respectively.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxSelectBoxOptions.searchEnabled">
+            <summary>Specifies whether the search box is visible.</summary>
+            <value>The search enabled.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.DxSelectBoxOptions.applyValueMode">
+            <summary>Specifies the way an end-user applies the selected value.</summary>
+            <value>The apply value mode.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridEmailRule.type">
+            <summary>Specifies the rule type</summary>
+            <value>The the rule type.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridNumericRule.type">
+            <summary>Specifies the rule type</summary>
+            <value>The the rule type.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridRangeRule.type">
+            <summary>Specifies the rule type</summary>
+            <value>The the rule type.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridRangeRule.max">
+            <summary>Specifies the maximum value allowed for the validated value.</summary>
+            <value>The maximum.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridRangeRule.min">
+            <summary>Specifies the minimum value allowed for the validated value.</summary>
+            <value>The minimum.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridRequiredRule.type">
+            <summary>Specifies the rule type</summary>
+            <value>The the rule type.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridRequiredRule.trim">
+            <summary>Indicates whether to remove the Space characters from the validated value.</summary>
+            <value>The trim.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridStringLengthRule.type">
+            <summary>Specifies the rule type</summary>
+            <value>The the rule type.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridStringLengthRule.trim">
+            <summary>Indicates whether to remove the Space characters from the validated value.</summary>
+            <value>The trim.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridStringLengthRule.max">
+            <summary>Specifies the maximum length allowed for the validated value.</summary>
+            <value>The maximum.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridStringLengthRule.min">
+            <summary>Specifies the minimum length allowed for the validated value.</summary>
+            <value>The minimum.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridValidationRuleBase.type">
+            <summary>Specifies the rule type</summary>
+            <value>The the rule type.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridValidationRuleBase.message">
+            <summary>Specifies the message that is shown if the rule is broken.</summary>
+            <value>The message.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.DxGrid.Validation.DxGridValidationRuleBase.ignoreEmptyValue">
+            <summary>If set to true, empty values are valid.</summary>
+            <value><c>true</c> if empty values are valid; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.ItemStatus.None">
+            <summary>None</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.ItemStatus.InProgress">
+            <summary>In Progress</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.ItemStatus.Succeeded">
+            <summary>Succeeded</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.ItemStatus.Failed">
+            <summary>Failed</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.ItemStatus.Warning">
+            <summary>Warning</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.ItemStatus.Unavailable">
+            <summary>Unavailable</summary>
+        </member>
+        <member name="F:Emby.Web.GenericEdit.Elements.ItemStatus.Unknown">
+            <summary>Unknown</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.LabelItem.CanHideInCompactView">
+            <summary>Gets or sets a value indicating whether the label can be hidden in views with limited screen space.</summary>
+            <value><c>true</c> if this label can be hidden; otherwise, <c>false</c>.</value>
+            <remarks>
+                <para>This is intentended for hiding elements in views (like TV mnode), where screen space is limited.</para>
+                <para>Apply this to non-essential elements only as there might be no way to make them visible at the client side.</para>
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.SpacerItem.CanHideInCompactView">
+            <summary>Gets or sets a value indicating whether the spacer can be hidden in views with limited screen space.</summary>
+            <value><c>true</c> if this spacer can be hidden; otherwise, <c>false</c>.</value>
+            <remarks>
+                <para>This is intentended for hiding elements in views (like TV mnode), where screen space is limited.</para>
+                <para>Apply this to non-essential elements only as there might be no way to make them visible at the client side.</para>
+            </remarks>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Elements.StatusItem.CanHideInCompactView">
+            <summary>Gets or sets a value indicating whether the item can be hidden in views with limited screen space.</summary>
+            <value><c>true</c> if this item can be hidden; otherwise, <c>false</c>.</value>
+            <remarks>
+                <para>This is intentended for hiding elements in views (like TV mnode), where screen space is limited.</para>
+                <para>Apply this to non-essential elements only as there might be no way to make them visible at the client side.</para>
+            </remarks>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Properties.Resources.EditorFactoryBase_CreateEditorBooleanTristate_OFF">
+            <summary>
+              Looks up a localized string similar to OFF.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Properties.Resources.EditorFactoryBase_CreateEditorBooleanTristate_ON">
+            <summary>
+              Looks up a localized string similar to ON.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Properties.Resources.GridFilterPanelTexts_clearFilter_Clear">
+            <summary>
+              Looks up a localized string similar to Clear.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Properties.Resources.GridFilterPanelTexts_createFilter_Create_Filter">
+            <summary>
+              Looks up a localized string similar to Create Filter.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Properties.Resources.GridFilterPanelTexts_filterEnabledHint_Enable_the_filter">
+            <summary>
+              Looks up a localized string similar to Enable the filter.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Properties.Resources.GridOptions_GridOptions_No_Data_Available">
+            <summary>
+              Looks up a localized string similar to No Data Available.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Properties.Resources.Initial">
+            <summary>
+              Looks up a localized string similar to a.
+            </summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Properties.Resources.PropertyChangeInfo_ToString_0_Original_1_Actual_2">
+            <summary>
+              Looks up a localized string similar to {0}: Original: {1} Actual: {2}.
+            </summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.PropertyDiff.PropertyChangeInfo.ToString">
+            <summary>Returns a string that represents the current object.</summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Validation.ValidationContext.#ctor(Emby.Web.GenericEdit.EditableObjectBase)">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Validation.ValidationContext.#ctor(System.String,Emby.Web.GenericEdit.Validation.ValidationContext,Emby.Web.GenericEdit.EditObjectContainer,Emby.Web.GenericEdit.Editors.EditorGroup,Emby.Web.GenericEdit.EditableObjectBase,Emby.Web.GenericEdit.Validation.ValidationErrorList)">
+            <summary>Initializes a new instance of the <see cref="T:System.Object"></see> class.</summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Validation.ValidationError">
+            <summary>
+            Class representing a validation error for descendants of <see cref="T:Emby.Web.GenericEdit.EditableObjectBase"/> or <see cref="T:Emby.Web.GenericEdit.EditableOptionsBase"/>.
+            </summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Validation.ValidationError.#ctor(System.String,System.Nullable{Emby.Web.GenericEdit.Common.EditorTypes},System.String,System.String,System.String,System.String)">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Validation.ValidationError" /> class.</summary>
+            <param name="editorId">The editor identifier.</param>
+            <param name="editorType">Type of the editor.</param>
+            <param name="propertyName">Name of the property.</param>
+            <param name="propertyDisplayName">Display name of the property.</param>
+            <param name="stringValue">The string value.</param>
+            <param name="errorMessage">The error message.</param>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Validation.ValidationError.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Emby.Web.GenericEdit.Validation.ValidationError"/> class.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Validation.ValidationError.EditorId">
+            <summary>Gets or sets the editor identifier.</summary>
+            <value>The editor identifier.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Validation.ValidationError.EditorType">
+            <summary>Gets or sets the type of the editor.</summary>
+            <value>The type of the editor.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Validation.ValidationError.PropertyName">
+            <summary>Gets or sets the name of the property.</summary>
+            <value>The name of the property.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Validation.ValidationError.PropertyDisplayName">
+            <summary>Gets or sets the display name of the property.</summary>
+            <value>The display name of the property.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Validation.ValidationError.StringValue">
+            <summary>Gets or sets the string value.</summary>
+            <value>The string value.</value>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Validation.ValidationError.ErrorMessage">
+            <summary>Gets or sets the error message.</summary>
+            <value>The error message.</value>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Validation.ValidationError.ToString">
+            <summary>Returns a string that represents the current object.</summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Validation.ValidationErrorList">
+            <summary>
+            Class representing a list of validation errors for descendants of <see cref="T:Emby.Web.GenericEdit.EditableObjectBase"/> or <see cref="T:Emby.Web.GenericEdit.EditableOptionsBase"/>.
+            </summary>
+        </member>
+        <member name="T:Emby.Web.GenericEdit.Validation.ValidationException">
+            <summary>
+            Class representing a list of validation errors for descendants of <see cref="T:Emby.Web.GenericEdit.EditableObjectBase"/> or <see cref="T:Emby.Web.GenericEdit.EditableOptionsBase"/>.
+            </summary>
+        </member>
+        <member name="M:Emby.Web.GenericEdit.Validation.ValidationException.#ctor(Emby.Web.GenericEdit.Validation.ValidationResult)">
+            <summary>Initializes a new instance of the <see cref="T:System.Exception"></see> class.</summary>
+        </member>
+        <member name="P:Emby.Web.GenericEdit.Validation.ValidationException.Message">
+            <summary>Gets a message that describes the current exception.</summary>
+            <returns>The error message that explains the reason for the exception, or an empty string ("").</returns>
+        </member>
+    </members>
+</doc>

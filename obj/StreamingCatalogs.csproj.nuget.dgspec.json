@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/salmanjaiser/StreamPlugin/StreamingCatalogs.csproj": {}
+  },
+  "projects": {
+    "/Users/salmanjaiser/StreamPlugin/StreamingCatalogs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salmanjaiser/StreamPlugin/StreamingCatalogs.csproj",
+        "projectName": "StreamingCatalogs",
+        "projectPath": "/Users/salmanjaiser/StreamPlugin/StreamingCatalogs.csproj",
+        "packagesPath": "/Users/salmanjaiser/.nuget/packages/",
+        "outputPath": "/Users/salmanjaiser/StreamPlugin/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/salmanjaiser/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[7.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
